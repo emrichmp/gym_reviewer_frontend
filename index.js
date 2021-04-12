@@ -35,9 +35,36 @@ function createFormHandler(e) {
     const nameInput = document.querySelector('#input-name').value
     const descInput = document.querySelector('#input-description').value
     const locationInput = document.querySelector('#input-location').value
-    postFetch(nameInput, descInput, locationInput)
+    postFetchGyms(nameInput, descInput, locationInput)
 }
 
-function postFetch(name, description, location) {
+function postFetchGyms(name, description, location) {
+    //confirms data is goin thru
     console.log(name, description, location)
+    
+  fetch(gymEndPoint, {
+    // POST request
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({
+        name: name,
+        description: description,
+        location: location
+    })
+  })
+  .then(response => response.json())
+  .then(gym => {
+    console.log(gym);
+    // render JSON response
+    const gymMarkup = `
+    <div data-id=${gym.id}>
+      <h3>${gym.name} </h3>
+      <h3>${gym.description}</h3>
+      <h4>${gym.location}</h4>
+      <button data-id=${gym.id}>edit</button>
+    </div>
+    <br><br>`;
+
+    document.querySelector('#gym-container').innerHTML += gymMarkup;
+  })
 }
