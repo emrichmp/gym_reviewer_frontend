@@ -9,7 +9,7 @@ function getGyms() {
     .then(response => response.json())
     .then(gyms => {
         gyms.data.forEach(gym => {
-            // double check how your data is nested in the console so you can successfully access the attributes of each individual object
+            //renders this html and appends it on the page to display the attr data
             const gymMarkup = `
               <div data-id=${gym.id}>
                 <h3>${gym.attributes.name}</h3>
