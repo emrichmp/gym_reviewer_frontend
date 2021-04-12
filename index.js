@@ -1,9 +1,15 @@
 const gymEndPoint = "http://localhost:3000/api/v1/gyms"
 
 document.addEventListener('DOMContentLoaded', () => {
+    //Once DOM content is loaded, we are grabbing the JSON and using it in the getGyms() function
     getGyms()
-})
+    //grabs form
+    const createGymForm = document.querySelector("#create-gym-form")
+    createGymForm.addEventListener("submit", (e) => 
+    createFormHandler(e))
 
+})
+//gets the gym data from the JSON
 function getGyms() {
     fetch(gymEndPoint)
     .then(response => response.json())
@@ -22,4 +28,16 @@ function getGyms() {
               document.querySelector('#gym-container').innerHTML += gymMarkup
           })
     })
+}
+//handles form to assign data from form into variables
+function createFormHandler(e) {
+    e.preventDefault()
+    const nameInput = document.querySelector('#input-name').value
+    const descInput = document.querySelector('#input-description').value
+    const locationInput = document.querySelector('#input-location').value
+    postFetch(nameInput, descInput, locationInput)
+}
+
+function postFetch(name, description, location) {
+    console.log(name, description, location)
 }
