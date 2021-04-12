@@ -29,6 +29,7 @@ function getGyms() {
           })
     })
 }
+
 //handles form to assign data from form into variables
 function createFormHandler(e) {
     e.preventDefault()
