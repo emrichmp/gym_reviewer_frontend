@@ -3,3 +3,4 @@ Goals/to do
 - add function to create a comment
 - Refactor HTML forms into JS - maybe
 - Clean up DB
+- Refactor index.js
