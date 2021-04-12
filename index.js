@@ -55,7 +55,7 @@ function postFetchGyms(name, description, location) {
   .then(response => response.json())
   .then(gym => {
     console.log(gym);
-    // render JSON response
+    // updates DOM with newly created gym instance
     const gymMarkup = `
     <div data-id=${gym.id}>
       <h3>${gym.name} </h3>
@@ -64,7 +64,6 @@ function postFetchGyms(name, description, location) {
       <button data-id=${gym.id}>edit</button>
     </div>
     <br><br>`;
-
     document.querySelector('#gym-container').innerHTML += gymMarkup;
   })
 }
