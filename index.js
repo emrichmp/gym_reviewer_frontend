@@ -27,6 +27,7 @@ function getGyms() {
                 <h3>${gym.attributes.location}</h3>
                 <h4>${gym.attributes.description}</h4>
                 <button data-id=${gym.id}>edit</button>
+                <h3> All Comments for this Gym </h3>
                 ${reviewHTML}
               </div>
               <br><br>`;
