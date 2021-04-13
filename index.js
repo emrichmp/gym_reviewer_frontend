@@ -3,6 +3,7 @@ const gymEndPoint = "http://localhost:3000/api/v1/gyms"
 document.addEventListener('DOMContentLoaded', () => {
     //Once DOM content is loaded, we are grabbing the JSON and using it in the getGyms() function
     getGyms()
+    // getReviews()
     //grabs form
     const createGymForm = document.querySelector("#create-gym-form")
     createGymForm.addEventListener("submit", (e) => 
@@ -16,6 +17,7 @@ function getGyms() {
     .then(gyms => {
         gyms.data.forEach(gym => {
             //renders this html and appends it on the page to display the attr data
+            //console.log(gym.attributes.reviews[0])
             const gymMarkup = `
               <div data-id=${gym.id}>
                 <h3>${gym.attributes.name}</h3>
@@ -24,11 +26,27 @@ function getGyms() {
                 <button data-id=${gym.id}>edit</button>
               </div>
               <br><br>`;
-    
               document.querySelector('#gym-container').innerHTML += gymMarkup
           })
     })
 }
+
+// function getReviews() {
+//     fetch(gymEndPoint)
+//     .then(response => response.json())
+//     .then(gyms => {
+//         gyms.data.attributes.reviews.forEach(review => {
+//             //renders this html and appends it on the page to display the attr data
+//             const reviewMarkup = `
+//               <div data-id=${review.id}>
+//                 <h3>${review.content}</h3>
+//                 <h3>${review.rating}</h3>
+//               </div>
+//               <br><br>`;
+//               document.querySelector('#review-container').innerHTML += reviewMarkup
+//           })
+//     })
+// }
 
 //handles form to assign data from form into variables
 function createFormHandler(e) {
