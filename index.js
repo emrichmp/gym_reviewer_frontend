@@ -7,7 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const createGymForm = document.querySelector("#create-gym-form")
     createGymForm.addEventListener("submit", (e) => 
     createFormHandler(e))
-
+    const createReviewForm = document.querySelector("#create-review-form")
+    createReviewForm.addEventListener("submit", (e) => 
+    createReviewFormHandler(e))
 })
 //gets the gym data from the JSON
 function getGyms() {
@@ -47,7 +49,7 @@ function createFormHandler(e) {
 
 function postFetchGyms(name, description, location) {
     //confirms data is goin thru
-    console.log(name, description, location)
+    // console.log(name, description, location)
     
   fetch(gymEndPoint, {
     // POST request
@@ -73,4 +75,16 @@ function postFetchGyms(name, description, location) {
     <br><br>`;
     document.querySelector('#gym-container').innerHTML += gymMarkup;
   })
+}
+
+function createReviewFormHandler(e) {
+    e.preventDefault()
+    const contentInput = document.querySelector('#input-content').value
+    const ratingInput = document.querySelector('#input-rating').value
+    const idInput = document.querySelector('#input-gym-id').value
+    postFetchReviews(contentInput, ratingInput, idInput)
+}
+
+function postFetchReviews(content, rating, id) {
+    console.log(content, rating, id)
 }
