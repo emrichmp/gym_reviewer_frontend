@@ -91,14 +91,14 @@ function createReviewFormHandler(e) {
 function postFetchReviews(content, rating, id) {
     console.log(content, rating, id)
 
-    // fetch(reviewEndPoint, {
-    //     // POST request
-    //     method: "POST",
-    //     headers: {"Content-Type": "application/json"},
-    //     body: JSON.stringify({
-    //         content: content,
-    //         rating: rating,
-    //         gym_id: id
-    //     })
-    //   })
+    fetch(reviewEndPoint, {
+        // POST request
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+            content: content,
+            rating: rating,
+            gym_id: id
+        })
+      })
 }
