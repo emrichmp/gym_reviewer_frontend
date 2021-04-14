@@ -22,7 +22,7 @@ function getGyms() {
         gyms.data.forEach(gym => {
             let reviewHTML = ''
             gym.attributes.reviews.forEach(review => {
-                reviewHTML += `<h4>${review.content} - ${review.rating}</h4>`
+                reviewHTML += `<p>${review.content} - ${review.rating}</p>`
             })
             //renders this html and appends it on the page to display the attr data
             //console.log(gym.attributes.reviews[0])
