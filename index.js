@@ -5,8 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
     getGyms()
     //grabs form
     const createGymForm = document.querySelector("#create-gym-form")
+    //fires this when submit is pressed to add the new gym from the form
     createGymForm.addEventListener("submit", (e) => 
     createFormHandler(e))
+    //fires this when submit is pressed to add the new review from the form
     const createReviewForm = document.querySelector("#create-review-form")
     createReviewForm.addEventListener("submit", (e) => 
     createReviewFormHandler(e))
