@@ -1,9 +1,8 @@
 Goals/to do
-- add function that shows comments under each gym
-- add function to create a comment
-- Refactor HTML forms into JS - maybe
-- Clean up DB
+- add function to create a comment under each gym
 - Refactor index.js
+- Use OO JS
+- Make sure there are 3 AJAX Calls
 
 Technical and Complexity Requirements
 In order to demonstrate your proficiency with what you've learned about web development with JavaScript, here are the requirements for your project. You should view these guidelines as a minimum bar for the features you include in your application. It's your project, and you are encouraged to go above and beyond these requirements.
@@ -21,11 +20,11 @@ JavaScript
 [ ] Translate JSON responses into JavaScript model objects using ES6 class or constructor function syntax.
 [ ] Use ES6 features when appropriate (e.g. arrow functions, let & const, rest and spread syntax).
 Rails
-[ ] Follow Rails MVC and RESTful conventions. That means, for example, that a request GET /puppies ought to be handled by the PuppiesController, fetch puppies from the database using a Puppy Active Record model, and return a list of puppies as JSON.
-[ ] Well-named variables and methods
-[ ] Short, single-purpose methods
+[X] Follow Rails MVC and RESTful conventions. That means, for example, that a request GET /puppies ought to be handled by the PuppiesController, fetch puppies from the database using a Puppy Active Record model, and return a list of puppies as JSON.
+[X] Well-named variables and methods
+[X] Short, single-purpose methods
 Git
-[ ] Aim for a large number of small commits - commit frequently!
-[ ] Add meaningful messages to your commits. When you look back at your commits with git log, the messages should describe each change.
-[ ] Don't include changes in a commit that aren't related to the commit message
+[X] Aim for a large number of small commits - commit frequently!
+[X] Add meaningful messages to your commits. When you look back at your commits with git log, the messages should describe each change.
+[X] Don't include changes in a commit that aren't related to the commit message
 
