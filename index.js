@@ -9,10 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     //fires this when submit is pressed to add the new gym from the form
     createGymForm.addEventListener("submit", (e) => 
     createFormHandler(e))
-    //fires this when submit is pressed to add the new review from the form
-    const createReviewForm = document.querySelector("#create-review-form")
-    createReviewForm.addEventListener("submit", (e) => 
-    createReviewFormHandler(e))
 })
 //gets the gym data from the JSON
 function getGyms() {
@@ -34,6 +30,7 @@ function getGyms() {
                 <button data-id=${gym.id}>edit</button>
                 <h3> All Comments for this Gym </h3>
                 ${reviewHTML}
+                <button data-id=${gym.id}>Add Comment</button>
               </div>
               <br><br>`;
               document.querySelector('#gym-container').innerHTML += gymMarkup
@@ -70,35 +67,19 @@ function postFetchGyms(name, description, location) {
     // updates DOM with newly created gym instance
     const gymMarkup = `
     <div data-id=${gym.id}>
-      <h3>${gym.name} </h3>
+      <h3>${gym.name}  - id: ${gym.id}</h3>
       <h3>${gym.description}</h3>
       <h4>${gym.location}</h4>
       <button data-id=${gym.id}>edit</button>
+      <h3> All Comments for this Gym </h3>
+      add comments here - dev
+      <button data-id=${gym.id}>Add Comment</button>
     </div>
     <br><br>`;
     document.querySelector('#gym-container').innerHTML += gymMarkup;
   })
 }
 
-function createReviewFormHandler(e) {
-    e.preventDefault()
-    const contentInput = document.querySelector('#input-content').value
-    const ratingInput = document.querySelector('#input-rating').value
-    const idInput = document.querySelector('#input-gym-id').value
-    postFetchReviews(contentInput, ratingInput, idInput)
-}
-
-function postFetchReviews(content, rating, id) {
-    console.log(content, rating, id)
-
-    fetch(reviewEndPoint, {
-        // POST request
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({
-            content: content,
-            rating: rating,
-            gym_id: id
-        })
-      })
-}
+{/* <h3> All Comments for this Gym </h3>
+${reviewHTML}
+<button data-id=${gym.id}>Add Comment</button> */}
