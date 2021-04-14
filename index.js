@@ -23,7 +23,7 @@ function getGyms() {
             //console.log(gym.attributes.reviews[0])
             const gymMarkup = `
               <div data-id=${gym.id}>
-                <h3>${gym.attributes.name}</h3>
+                <h3>${gym.attributes.name} - id: ${gym.id}</h3>
                 <h3>${gym.attributes.location}</h3>
                 <h4>${gym.attributes.description}</h4>
                 <button data-id=${gym.id}>edit</button>
