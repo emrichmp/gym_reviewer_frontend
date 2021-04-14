@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
     createGymForm.addEventListener("submit", (e) => 
     createFormHandler(e))
     //fires this when submit is pressed to add the new review from the form
-    // const createReviewForm = document.querySelector("#create-review-form")
-    // createReviewForm.addEventListener("submit", (e) => 
-    // createReviewFormHandler(e))
+    const createReviewForm = document.querySelector("#create-review-form")
+    createReviewForm.addEventListener("submit", (e) => 
+    createReviewFormHandler(e))
 })
 //gets the gym data from the JSON
 function getGyms() {
@@ -80,25 +80,25 @@ function postFetchGyms(name, description, location) {
   })
 }
 
-// function createReviewFormHandler(e) {
-//     e.preventDefault()
-//     const contentInput = document.querySelector('#input-content').value
-//     const ratingInput = document.querySelector('#input-rating').value
-//     const idInput = document.querySelector('#input-gym-id').value
-//     postFetchReviews(contentInput, ratingInput, idInput)
-// }
+function createReviewFormHandler(e) {
+    e.preventDefault()
+    const contentInput = document.querySelector('#input-content').value
+    const ratingInput = document.querySelector('#input-rating').value
+    const idInput = document.querySelector('#input-gym-id').value
+    postFetchReviews(contentInput, ratingInput, idInput)
+}
 
-// function postFetchReviews(content, rating, id) {
-//     console.log(content, rating, id)
+function postFetchReviews(content, rating, id) {
+    console.log(content, rating, id)
 
-//     fetch(reviewEndPoint, {
-//         // POST request
-//         method: "POST",
-//         headers: {"Content-Type": "application/json"},
-//         body: JSON.stringify({
-//             content: content,
-//             rating: rating,
-//             gym_id: id
-//         })
-//       })
-// }
+    // fetch(reviewEndPoint, {
+    //     // POST request
+    //     method: "POST",
+    //     headers: {"Content-Type": "application/json"},
+    //     body: JSON.stringify({
+    //         content: content,
+    //         rating: rating,
+    //         gym_id: id
+    //     })
+    //   })
+}
