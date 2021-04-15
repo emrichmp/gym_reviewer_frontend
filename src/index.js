@@ -18,6 +18,8 @@ function getGyms() {
         gyms.data.forEach(gym => {
             let reviewHTML = ''
             gym.attributes.reviews.forEach(review => {
+                let newReview = new Review(review)
+                //debugger
                 reviewHTML += `<p>${review.content} - ${review.rating}</p>`
             })
             //debugger
@@ -25,6 +27,7 @@ function getGyms() {
 
             document.querySelector('#gym-container').innerHTML += newGym.renderGymCard()
             document.querySelector('#gym-container').innerHTML += reviewHTML
+            document.querySelector('#gym-container').innerHTML += `<br></br>`
             //debugger
             //renders this html and appends it on the page to display the attr data
             //console.log(gym.attributes.reviews[0])
