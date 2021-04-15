@@ -1,5 +1,6 @@
 Goals/to do
-- add function to create a comment under each gym
+- Create comment form
+- Be able to add comment to JSON
 - Refactor index.js
 - Use OO JS
 - Make sure there are 3 AJAX Calls
