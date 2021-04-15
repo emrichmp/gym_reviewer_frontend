@@ -4,6 +4,7 @@ Goals/to do
 - Refactor index.js
 - Use OO JS
 - Make sure there are 3 AJAX Calls
+- CSS styling
 
 Technical and Complexity Requirements
 In order to demonstrate your proficiency with what you've learned about web development with JavaScript, here are the requirements for your project. You should view these guidelines as a minimum bar for the features you include in your application. It's your project, and you are encouraged to go above and beyond these requirements.
