@@ -20,20 +20,14 @@ function getGyms() {
             gym.attributes.reviews.forEach(review => {
                 reviewHTML += `<p>${review.content} - ${review.rating}</p>`
             })
+            //debugger
+            let newGym = new Gym(gym, gym.attributes)
+
+            document.querySelector('#gym-container').innerHTML += newGym.renderGymCard()
+            document.querySelector('#gym-container').innerHTML += reviewHTML
+            //debugger
             //renders this html and appends it on the page to display the attr data
             //console.log(gym.attributes.reviews[0])
-            const gymMarkup = `
-              <div data-id=${gym.id}>
-                <h3>${gym.attributes.name} - id: ${gym.id}</h3>
-                <h3>${gym.attributes.location}</h3>
-                <h4>${gym.attributes.description}</h4>
-                <button data-id=${gym.id}>edit</button>
-                <h3> All Comments for this Gym </h3>
-                ${reviewHTML}
-                <button data-id=${gym.id}>Add Comment</button>
-              </div>
-              <br><br>`;
-              document.querySelector('#gym-container').innerHTML += gymMarkup
           })
     })
 }
@@ -64,19 +58,10 @@ function postFetchGyms(name, description, location) {
   .then(response => response.json())
   .then(gym => {
     console.log(gym);
-    // updates DOM with newly created gym instance
-    const gymMarkup = `
-    <div data-id=${gym.id}>
-      <h3>${gym.name}  - id: ${gym.id}</h3>
-      <h3>${gym.description}</h3>
-      <h4>${gym.location}</h4>
-      <button data-id=${gym.id}>edit</button>
-      <h3> All Comments for this Gym </h3>
-      add comments here - dev
-      <button data-id=${gym.id}>Add Comment</button>
-    </div>
-    <br><br>`;
-    document.querySelector('#gym-container').innerHTML += gymMarkup;
+
+    let newGym = new Gym(gym, gym)
+
+    document.querySelector('#gym-container').innerHTML += newGym.renderGymCard()
   })
 }
 
