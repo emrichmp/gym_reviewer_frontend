@@ -19,6 +19,9 @@ class Gym {
         </div>
         `;
     }
+    static findById(id) {
+        return this.all.find(gym => gym.id === id);
+      }
 }
 
 Gym.all = [];

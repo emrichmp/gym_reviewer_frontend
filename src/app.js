@@ -1,7 +1,11 @@
 class App {
     attachEventListeners() {
       document.querySelector('#gym-container').addEventListener('click', e => {
-        console.log('clicked');
+        //console.log('clicked');
+        const id = e.target.dataset.id
+        const gym = Gym.findById(id)
+        console.log(id)
+        console.log(gym)
       });
     }
   }
