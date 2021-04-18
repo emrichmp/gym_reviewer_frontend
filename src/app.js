@@ -4,8 +4,9 @@ class App {
         //console.log('clicked');
         const id = e.target.dataset.id
         const gym = Gym.findById(id)
-        console.log(id)
+        //console.log(id)
         console.log(gym)
+        document.querySelector('#review').innerHTML = gym.renderReviewForm()
       });
     }
   }

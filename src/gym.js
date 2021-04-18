@@ -18,10 +18,30 @@ class Gym {
           <h3> Reviews </h3>
           <button data-id=${this.id}>Add Review</button>
         </div>
+        <div id="gym-reviews">
+        </div>
+        <div id="review">
+        </div>
         `;
     }
     static findById(id) {
         return this.all.find(gym => gym.id === id);
+      }
+
+    renderReviewForm() {
+        return `
+        <form data-id=${this.id}>
+          <label>Comment</label>
+          <p>
+          <input id='input-content' type="text" name="content" value="" class="input-content">
+          </p>
+          <label>Review</label>
+          <p>
+          <input id='input-rating' type="text" name="rating" value="" class="input-rating">
+          </p>
+          <button type='submit'>Save Review</button>
+        </form>
+      `;
       }
 }
 

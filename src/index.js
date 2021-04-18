@@ -28,7 +28,7 @@ function getGyms() {
             let newGym = new Gym(gym, gym.attributes, gym.attributes.reviews)
 
             document.querySelector('#gym-container').innerHTML += newGym.renderGymCard()
-            document.querySelector('#gym-container').innerHTML += reviewHTML
+            document.querySelector('#gym-reviews').innerHTML += reviewHTML
             document.querySelector('#gym-container').innerHTML += `<br></br>`
             //debugger
             //renders this html and appends it on the page to display the attr data
