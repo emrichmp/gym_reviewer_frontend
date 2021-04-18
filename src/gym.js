@@ -20,7 +20,7 @@ class Gym {
         </div>
         <div id="gym-reviews">
         </div>
-        <div id="review">
+        <div id="review-form">
         </div>
         `;
     }
