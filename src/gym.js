@@ -1,10 +1,11 @@
 
 class Gym {
-    constructor(gym, gymAttributes){
+    constructor(gym, gymAttributes, gymReviews){
         this.id = gym.id
         this.name = gymAttributes.name
         this.description = gymAttributes.description
         this.location = gymAttributes.location
+        this.reviews = gymReviews
         Gym.all.push(this);
     }
 

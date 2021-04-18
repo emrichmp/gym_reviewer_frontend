@@ -25,7 +25,7 @@ function getGyms() {
                 reviewHTML += `<p>${review.content} - ${review.rating}</p>`
             })
             //debugger
-            let newGym = new Gym(gym, gym.attributes)
+            let newGym = new Gym(gym, gym.attributes, gym.attributes.reviews)
 
             document.querySelector('#gym-container').innerHTML += newGym.renderGymCard()
             document.querySelector('#gym-container').innerHTML += reviewHTML
