@@ -43,6 +43,15 @@ class Gym {
         </form>
       `;
       }
+
+      createReviewFormHandler(e) {
+        e.preventDefault()
+        const contentInput = document.querySelector('#input-content').value
+        const ratingInput = document.querySelector('#input-rating').value
+        console.log(contentInput)
+        console.log(ratingInput)
+        //postFetchReviews(contentInput, ratingInput)
+    }
 }
 
 Gym.all = [];
