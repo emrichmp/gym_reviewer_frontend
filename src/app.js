@@ -5,7 +5,9 @@ class App {
         const gym = Gym.findById(id)
         //console.log(id)
         console.log(gym)
-        document.querySelector('#review-form').innerHTML = gym.renderReviewForm()
+        document.getElementById(`review-form-${gym.id}`).innerHTML = gym.renderReviewForm()
+        //document.querySelector('#review-form').innerHTML = gym.renderReviewForm()
+        
       });
     //   document.querySelector('#review-form').addEventListener('submit', (e) => 
     //   gym.createReviewFormHandler(e))

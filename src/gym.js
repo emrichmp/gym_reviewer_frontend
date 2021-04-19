@@ -18,7 +18,7 @@ class Gym {
           <h3> Reviews </h3>
           <button data-id=${this.id}>Add Review</button>
           <div id="gym-reviews"></div>
-          <div id="review-form"></div>
+          <div id="review-form-${this.id}"></div>
         </div>
 
         `;
