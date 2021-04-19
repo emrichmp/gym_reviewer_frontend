@@ -1,3 +1,5 @@
+const reviewEndPoint = "http://localhost:3000/api/v1/reviews"
+
 class App {
     attachEventListeners() {
       document.querySelector('#gym-container').addEventListener('click', e => {
@@ -16,9 +18,27 @@ class App {
             console.log(formId)
             console.log(formContent)
             console.log(formRating)
+            this.postFetchReviews(formId, formContent, formRating)
 
             document.getElementById(`gym-reviews-${formId}`).innerHTML += `<p>${formContent} - ${formRating}</p>`
         })
       });
+    }
+    postFetchReviews(gymReviewId, gymReviewContent, gymReviewRating){
+        fetch(reviewEndPoint, {
+            // POST request
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({
+                content: gymReviewContent,
+                rating: gymReviewRating,
+                gym_id: gymReviewId
+            })
+          })
+          .then(response => response.json())
+          .then(review => {
+            console.log(review);
+        
+          })
     }
   }

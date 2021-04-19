@@ -1,5 +1,4 @@
 const gymEndPoint = "http://localhost:3000/api/v1/gyms"
-const reviewEndPoint = "http://localhost:3000/api/v1/reviews"
 
 document.addEventListener('DOMContentLoaded', () => {
     const app = new App();
