@@ -1,9 +1,9 @@
 Goals/to do
-- Finish Reviews
-    - *********Have review form render under specific gym instance
-    - Add review to API/JSON w/ POST request
-    - *********Have DOM update with the review in the right spot
-- Make sure there are 3 AJAX Calls - when I finish reviews this will be completed
+[X] - Finish Reviews
+    [X] - Have review form render under specific gym instance
+    [X] - Add review to API/JSON w/ POST request
+    [X] - Have DOM update with the review in the right spot
+[X] - Make sure there are 3 AJAX Calls - when I finish reviews this will be completed
 - Finish video 6 - deploy project?
 - Finish video 7 - clean up & refactor
 - CSS styling - Stretch goal
@@ -18,13 +18,13 @@ In order to demonstrate your proficiency with what you've learned about web deve
 
 [X] - The domain model served by the Rails backend must include a resource with at least one has-many relationship. For example, if you were building an Instagram clone, you might display a list of photos with associated comments.
 
-[] - The backend and frontend must collaborate to demonstrate Client-Server Communication. Your application should have at least 3 AJAX calls, covering at least 2 of Create, Read, Update, and Delete (CRUD). 
+[X] - The backend and frontend must collaborate to demonstrate Client-Server Communication. Your application should have at least 3 AJAX calls, covering at least 2 of Create, Read, Update, and Delete (CRUD). 
     - 3 AJAX calls
         * getGyms - GET fetch on the API to grab all gym instances
         * postFetchGyms - POST fetch on the API to add gym instance
-        * !!!postFetchReviews - POST fetch on the API to add the review instance!!!
+        * postFetchReviews - POST fetch on the API to add the review instance
     - Create and Read gyms
-    - !!!Create and Read views!!!
+    - Create and Read views!!!
 
 [X] - Your client-side JavaScript code must use fetch with the appropriate HTTP verb, and your Rails API should use RESTful conventions.
     - POST when adding a gym
