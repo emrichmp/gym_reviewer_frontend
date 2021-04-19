@@ -8,7 +8,5 @@ class App {
         document.getElementById(`review-form-${gym.id}`).innerHTML = gym.renderReviewForm()
         
       });
-    //   document.querySelector('#review-form').addEventListener('submit', (e) => 
-    //   gym.createReviewFormHandler(e))
     }
   }
