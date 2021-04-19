@@ -32,11 +32,11 @@ class Gym {
         <form data-id=${this.id}>
           <label>Comment</label>
           <p>
-          <input id='review-input-content' type="text" name="content" value="" class="input-text">
+          <input id='review-input-content-${this.id}' type="text" name="content" value="" class="input-text">
           </p>
           <label>Review</label>
           <p>
-          <input id='review-input-rating' type="text" name="rating" value="" class="input-text">
+          <input id='review-input-rating-${this.id}' type="text" name="rating" value="" class="input-text">
           </p>
           <button type='submit'>Save Review</button>
         </form>

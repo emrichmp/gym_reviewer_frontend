@@ -11,11 +11,13 @@ class App {
             e.preventDefault();
             //id of the gym it belongs to
             const formId = e.target.dataset.id
-            const formContent = document.getElementById("review-input-content").value;
-            const formRating = document.getElementById("review-input-rating").value;
+            const formContent = document.getElementById(`review-input-content-${formId}`).value;
+            const formRating = document.getElementById(`review-input-rating-${formId}`).value;
             console.log(formId)
             console.log(formContent)
             console.log(formRating)
+
+            document.getElementById(`gym-reviews-${formId}`).innerHTML += `<p>${formContent} - ${formRating}</p>`
         })
       });
     }
