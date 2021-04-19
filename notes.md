@@ -1,8 +1,12 @@
 Goals/to do
-- Be able to add comment to JSON
-- have comment form load in the right spot
+- Finish Reviews
+    - have review form render under specific gym instance
+    - be able to add review to API/JSON w/ POST request
+    - Have DOM update with the review in the right spot
 - Make sure there are 3 AJAX Calls
-- CSS styling
+- Finish video 6 - deploy project?
+- Finish video 7 - clean up & refactor
+- CSS styling - Stretch
 
 Technical and Complexity Requirements
 In order to demonstrate your proficiency with what you've learned about web development with JavaScript, here are the requirements for your project. You should view these guidelines as a minimum bar for the features you include in your application. It's your project, and you are encouraged to go above and beyond these requirements.
@@ -14,7 +18,17 @@ In order to demonstrate your proficiency with what you've learned about web deve
 
 [X] - The domain model served by the Rails backend must include a resource with at least one has-many relationship. For example, if you were building an Instagram clone, you might display a list of photos with associated comments.
 
-[] - The backend and frontend must collaborate to demonstrate Client-Server Communication. Your application should have at least 3 AJAX calls, covering at least 2 of Create, Read, Update, and Delete (CRUD). Your client-side JavaScript code must use fetch with the appropriate HTTP verb, and your Rails API should use RESTful conventions.
+[] - The backend and frontend must collaborate to demonstrate Client-Server Communication. Your application should have at least 3 AJAX calls, covering at least 2 of Create, Read, Update, and Delete (CRUD). 
+    - 3 AJAX calls
+        * getGyms - GET fetch on the API to grab all gym instances
+        * postFetchGyms - POST fetch on the API to add gym instance
+        * !!!postFetchReviews - POST fetch on the API to add the review instance!!!
+    - Create and Read gyms
+    - !!!Create and Read views!!!
+
+[X] - Your client-side JavaScript code must use fetch with the appropriate HTTP verb, and your Rails API should use RESTful conventions.
+    - POST when adding a gym
+    - POST when adding a comment
 
 JavaScript
 [X] Use classes and functions to organize your code into reusable pieces.
