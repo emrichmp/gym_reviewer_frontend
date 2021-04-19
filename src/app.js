@@ -11,12 +11,11 @@ class App {
             e.preventDefault();
             //id of the gym it belongs to
             const formId = e.target.dataset.id
-            // const formContent = e.target.querySelector('input-content').value;
-            // const formRating = e.target.querySelector('input-rating').value;
-            //const formContent = document.querySelector('review-input-content').value
+            const formContent = document.getElementById("review-input-content").value;
+            const formRating = document.getElementById("review-input-rating").value;
             console.log(formId)
-            //console.log(formContent)
-            // console.log(formRating)
+            console.log(formContent)
+            console.log(formRating)
         })
       });
     }
