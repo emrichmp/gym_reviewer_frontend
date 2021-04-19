@@ -6,7 +6,6 @@ class App {
         //console.log(id)
         console.log(gym)
         document.getElementById(`review-form-${gym.id}`).innerHTML = gym.renderReviewForm()
-        //document.querySelector('#review-form').innerHTML = gym.renderReviewForm()
         
       });
     //   document.querySelector('#review-form').addEventListener('submit', (e) => 
