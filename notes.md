@@ -1,6 +1,6 @@
 Goals/to do
-- Create comment form
 - Be able to add comment to JSON
+- have comment form load in the right spot
 - Make sure there are 3 AJAX Calls
 - CSS styling
 
