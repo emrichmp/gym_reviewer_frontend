@@ -1,6 +1,6 @@
 Goals/to do
 - Finish Reviews
-    - Have review form render under specific gym instance
+    - *********Have review form render under specific gym instance
     - Add review to API/JSON w/ POST request
     - Have DOM update with the review in the right spot
 - Make sure there are 3 AJAX Calls - when I finish reviews this will be completed
