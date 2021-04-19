@@ -1,4 +1,4 @@
-console.log("review.js")
+//console.log("review.js")
 
 class Review {
     constructor(review){
