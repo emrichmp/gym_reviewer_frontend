@@ -13,8 +13,9 @@ class App {
             const formId = e.target.dataset.id
             // const formContent = e.target.querySelector('input-content').value;
             // const formRating = e.target.querySelector('input-rating').value;
+            //const formContent = document.querySelector('review-input-content').value
             console.log(formId)
-            // console.log(formContent)
+            //console.log(formContent)
             // console.log(formRating)
         })
       });
