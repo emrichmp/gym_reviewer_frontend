@@ -34,7 +34,7 @@ class Gym {
           <p>
           <input id='review-input-content-${this.id}' type="text" name="content" value="" class="input-text">
           </p>
-          <label>Review</label>
+          <label>Rating</label>
           <p>
           <input id='review-input-rating-${this.id}' type="text" name="rating" value="" class="input-text">
           </p>
