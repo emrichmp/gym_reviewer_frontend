@@ -41,4 +41,19 @@ class App {
         
           })
     }
+
+    ///SEARCH CODE
+    searchEventListener(){
+        document.querySelector("#search-form").addEventListener("submit", e => {
+            //console.log("hi")
+            e.preventDefault()
+            const searchValue = document.getElementById(`search`).value
+            Gym.searchLocations(searchValue)
+        })
+    }
+
+
+    
+
+
   }

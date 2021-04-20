@@ -23,6 +23,32 @@ class Gym {
 
         `;
     }
+
+
+
+    //SEARCH FUNCTION CODE
+    static searchLocations(searchValue){
+        //console.log(Gym.all)
+        document.querySelector("#search-results").innerHTML = ``
+        let nameArray = [];
+        Gym.all.forEach(gym => {
+            if (searchValue === gym.location){
+                nameArray += gym.name
+            }
+        })
+        if (nameArray.length > 1){
+            document.querySelector("#search-results").innerHTML += `These gyms match ur location:`
+            document.querySelector("#search-results").innerHTML += nameArray
+        } else {
+            document.querySelector("#search-results").innerHTML = `No gym in that location`
+        }
+    }
+
+
+
+
+    
+
     static findById(id) {
         return this.all.find(gym => gym.id === id);
       }

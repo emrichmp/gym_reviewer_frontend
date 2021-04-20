@@ -3,10 +3,22 @@ const gymEndPoint = "http://localhost:3000/api/v1/gyms"
 document.addEventListener('DOMContentLoaded', () => {
     const app = new App();
     app.attachEventListeners();
+    app.searchEventListener();
     //Once DOM content is loaded, we are grabbing the JSON and using it in the getGyms() function
     getGyms()
     //grabs form
     const createGymForm = document.querySelector("#create-gym-form")
+
+//     const createSearchForm = document.querySelector("#search-form")
+
+//     createSearchForm.addEventListener("submit", e =>
+//             e.preventDefault();
+//             const searchValue = document.getElementById(`search`).value
+//             searchLocations(searchValue)
+//       )
+
+// )
+    //createSearchForm.addEventListener("submit")
     //fires this when submit is pressed to add the new gym from the form
     createGymForm.addEventListener("submit", (e) => 
     createFormHandler(e))
