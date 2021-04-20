@@ -21,9 +21,10 @@ In order to demonstrate your proficiency with what you've learned about web deve
         * postFetchGyms - POST fetch on the API to add gym instance
         * postFetchReviews - POST fetch on the API to add the review instance
     - Create and Read gyms
-    - Create and Read views!!!
+    - Create and Read views
 
 [X] - Your client-side JavaScript code must use fetch with the appropriate HTTP verb, and your Rails API should use RESTful conventions.
+    - GET when loading all gyms
     - POST when adding a gym
     - POST when adding a comment
 
