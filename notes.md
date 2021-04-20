@@ -4,9 +4,6 @@ Goals/to do
     [X] - Add review to API/JSON w/ POST request
     [X] - Have DOM update with the review in the right spot
 [X] - Make sure there are 3 AJAX Calls - when I finish reviews this will be completed
-- Finish video 6 - deploy project?
-- Finish video 7 - clean up & refactor
-- CSS styling - Stretch goal
 
 Technical and Complexity Requirements
 In order to demonstrate your proficiency with what you've learned about web development with JavaScript, here are the requirements for your project. You should view these guidelines as a minimum bar for the features you include in your application. It's your project, and you are encouraged to go above and beyond these requirements.
